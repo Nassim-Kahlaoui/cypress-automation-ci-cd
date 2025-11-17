@@ -1,0 +1,50 @@
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - checkout: self
+
+  # 1) Install Node
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.x'
+    displayName: 'Install Node.js'
+
+  # 2) Install dependencies
+  - script: |
+      npm install
+      npx cypress install
+    displayName: 'Install Cypress & dependencies'
+
+  # 3) Run Cypress tests
+  - script: |
+      npx cypress run
+    displayName: 'Run Cypress tests'
+
+  # 4) Generate Mochawesome report
+  - script: |
+      node generate-report.js
+      node write-results.js
+    displayName: "Generate report"
+
+  # 5) Publish artifacts
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: 'cypress/reports/mochawesome'
+      artifactName: 'mochawesome-report'
+      publishLocation: 'Container'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: 'cypress/videos'
+      artifactName: 'videos'
+      publishLocation: 'Container'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: 'cypress/screenshots'
+      artifactName: 'screenshots'
+      publishLocation: 'Container'
