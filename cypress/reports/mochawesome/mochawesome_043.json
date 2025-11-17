@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-06T16:12:54.916Z",
+    "end": "2025-08-06T16:12:55.481Z",
+    "duration": 565,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ad625891-6c30-4e79-9391-42d0119d7926",
+      "title": "",
+      "fullFile": "testapi/register_user.spec.js",
+      "file": "testapi/register_user.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cb170feb-2738-406a-892b-c7310a9111b2",
+          "title": "API 11 – Create/Register User Account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return 201 and confirmation message",
+              "fullTitle": "API 11 – Create/Register User Account should return 201 and confirmation message",
+              "timedOut": null,
+              "duration": 510,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const user = (0, _utils.creerUserUnique)();\ncy.request({\n  method: 'POST',\n  url: 'https://automationexercise.com/api/createAccount',\n  form: true,\n  body: {\n    name: user.name,\n    email: user.email,\n    password: user.password,\n    title: 'Mr',\n    birth_date: '10',\n    birth_month: 'May',\n    birth_year: '1997',\n    firstname: 'Nassim',\n    lastname: 'Kahlaoui',\n    company: 'FreelanceDeveloper',\n    address1: '122 rue sidi moman',\n    address2: 'Appt 5 Résidence laila',\n    country: 'Casablanca',\n    zipcode: '10000',\n    state: 'casablanca_settat',\n    city: 'Casablanca',\n    mobile_number: '0653226262'\n  }\n}).then(res => {\n  expect(res.status).to.eq(200);\n  const body = JSON.parse(res.body);\n  expect(body).to.have.property('message');\n  expect(body.message).to.eq('User created!');\n});",
+              "err": {},
+              "uuid": "ebaaa9f2-e473-4eb7-8569-5c73394bce17",
+              "parentUUID": "cb170feb-2738-406a-892b-c7310a9111b2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ebaaa9f2-e473-4eb7-8569-5c73394bce17"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 510,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

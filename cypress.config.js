@@ -1,0 +1,27 @@
+const { defineConfig } = require('cypress');
+
+module.exports = defineConfig({
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportDir: 'cypress/reports/mochawesome',
+    overwrite: false,
+    html: false,
+    json: true
+  },
+
+  e2e: {
+    baseUrl: 'https://automationexercise.com',
+    specPattern: ['cypress/e2e/**/*.cy.js', 'testapi/**/*.js'],
+    retries: 0,
+    supportFile: 'cypress/support/e2e.js',
+    watchForFileChanges: false,
+    downloadsFolder: 'cypress/downloads',
+    screenshotOnRunFailure: true,
+     pageLoadTimeout: 12000,
+    video: true,
+
+    setupNodeEvents(on, config) {
+     
+    }
+  }
+});

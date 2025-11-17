@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-06T16:27:11.348Z",
+    "end": "2025-08-06T16:27:14.813Z",
+    "duration": 3465,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "61909163-accb-4f18-a52b-a1759a8458c5",
+      "title": "",
+      "fullFile": "cypress/e2e/products/TC10_verify_subscription_home.cy.js",
+      "file": "cypress/e2e/products/TC10_verify_subscription_home.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "947d89dd-da0a-454b-bb98-c7239aa05f97",
+          "title": "Test Case 10: Verify Subscription in home page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit s’abonner avec succès via le footer",
+              "fullTitle": "Test Case 10: Verify Subscription in home page doit s’abonner avec succès via le footer",
+              "timedOut": null,
+              "duration": 3273,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.subscribeNewsletter('nassim11kahloui@gmail.com');",
+              "err": {},
+              "uuid": "f908cd43-3292-4902-8aa7-cfd9b2de1375",
+              "parentUUID": "947d89dd-da0a-454b-bb98-c7239aa05f97",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f908cd43-3292-4902-8aa7-cfd9b2de1375"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3273,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-06T16:12:26.974Z",
+    "end": "2025-08-06T16:12:44.930Z",
+    "duration": 17956,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c4043f37-dc6d-4a87-a1b2-f391c7aef129",
+      "title": "",
+      "fullFile": "testapi/login_valid.spec.js",
+      "file": "testapi/login_valid.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ca0f0698-e3a3-441b-943f-6297057f9fd0",
+          "title": "API 7 – Login with valid credentials",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return 200 and \"User exists\" message",
+              "fullTitle": "API 7 – Login with valid credentials should return 200 and \"User exists\" message",
+              "timedOut": null,
+              "duration": 17866,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.readFile('cypress/fixtures/userData.json').then(user => {\n  cy.request({\n    method: 'POST',\n    url: 'https://automationexercise.com/api/verifyLogin',\n    form: true,\n    body: {\n      email: user.email,\n      password: user.password\n    }\n  }).then(res => {\n    expect(res.status).to.eq(200);\n    const body = JSON.parse(res.body);\n    expect(body).to.have.property('message');\n    expect(body.message.trim()).to.eq('User exists!');\n  });\n});",
+              "err": {},
+              "uuid": "3b26f6c7-6123-4f22-8850-9413232c356b",
+              "parentUUID": "ca0f0698-e3a3-441b-943f-6297057f9fd0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3b26f6c7-6123-4f22-8850-9413232c356b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17866,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-06T16:26:41.689Z",
+    "end": "2025-08-06T16:26:45.705Z",
+    "duration": 4016,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "26c03ad1-0773-42da-b69c-c6d2c90ef2bf",
+      "title": "",
+      "fullFile": "cypress/e2e/products/TC07_test_cases_page.cy.js",
+      "file": "cypress/e2e/products/TC07_test_cases_page.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4b94feee-48af-4fbd-ad43-b4fdd54188b3",
+          "title": "Navigation vers la page Test Cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "devrait lancer le navigateur, accéder à la page d'accueil, cliquer sur Test Cases et vérifier la navigation",
+              "fullTitle": "Navigation vers la page Test Cases devrait lancer le navigateur, accéder à la page d'accueil, cliquer sur Test Cases et vérifier la navigation",
+              "timedOut": null,
+              "duration": 3873,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// 1 et 2. Lancer le navigateur et aller sur la page d’accueil\ncy.visit(_baseUrl.default.baseUrl);\n// 3. Vérifier que la page d’accueil est visible (exemple : vérifier logo ou un élément clé visible)\ncy.get('header').should('be.visible'); // ou un autre sélecteur représentatif de la home page\n// 4. Cliquer sur le bouton 'Test Cases'\ncy.contains('Test Cases').should('be.visible').click();\n// 5. Vérifier que l’URL contient '/test_cases' (ou ce qui correspond à la page Test Cases)\ncy.url().should('include', '/test_cases');\n// Et aussi vérifier un élément spécifique de la page Test Cases\ncy.get('h2.title.text-center').should('contain.text', 'Test Cases');",
+              "err": {},
+              "uuid": "e34961c6-b9f7-4cd4-8700-90347932413d",
+              "parentUUID": "4b94feee-48af-4fbd-ad43-b4fdd54188b3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e34961c6-b9f7-4cd4-8700-90347932413d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3873,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

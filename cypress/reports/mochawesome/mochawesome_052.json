@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-06T16:20:55.434Z",
+    "end": "2025-08-06T16:21:25.292Z",
+    "duration": 29858,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "252e0f1f-a3a5-4408-aa2d-4d5460dee5e0",
+      "title": "",
+      "fullFile": "cypress/e2e/account/TC23_verify_address_details_review_order.cy.js",
+      "file": "cypress/e2e/account/TC23_verify_address_details_review_order.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "efc22e2c-0414-40bf-9177-51445e44796f",
+          "title": "Test Case 23: Verify address details in checkout page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit vérifier que les détails d’adresse sont corrects dans le checkout",
+              "fullTitle": "Test Case 23: Verify address details in checkout page doit vérifier que les détails d’adresse sont corrects dans le checkout",
+              "timedOut": null,
+              "duration": 29744,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.verifierDetailsAdresseCheckout();",
+              "err": {},
+              "uuid": "84fe55d9-065b-47d0-80c0-f877efd67d5f",
+              "parentUUID": "efc22e2c-0414-40bf-9177-51445e44796f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "84fe55d9-065b-47d0-80c0-f877efd67d5f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29744,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

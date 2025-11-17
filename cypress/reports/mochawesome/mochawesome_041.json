@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-06T16:12:47.926Z",
+    "end": "2025-08-06T16:12:48.515Z",
+    "duration": 589,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8e68b71f-0853-41a8-95ee-428f1fbd67fe",
+      "title": "",
+      "fullFile": "testapi/products.spec.js",
+      "file": "testapi/products.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3c4ef298-9d1c-4702-8fcb-8771d9b0690e",
+          "title": "API 1 – Get All Products List",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return 200 and a list of products",
+              "fullTitle": "API 1 – Get All Products List should return 200 and a list of products",
+              "timedOut": null,
+              "duration": 560,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('https://automationexercise.com/api/productsList').then(res => {\n  expect(res.status).to.eq(200);\n  // ✅ Parse the string body to real JSON\n  const body = JSON.parse(res.body);\n  expect(body).to.have.property('products');\n  expect(body.products).to.be.an('array');\n  expect(body.products.length).to.be.greaterThan(0);\n});",
+              "err": {},
+              "uuid": "63fa7aba-019a-43f8-bbba-8469f24fb046",
+              "parentUUID": "3c4ef298-9d1c-4702-8fcb-8771d9b0690e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "63fa7aba-019a-43f8-bbba-8469f24fb046"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 560,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

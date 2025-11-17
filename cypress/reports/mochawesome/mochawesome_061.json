@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-06T16:23:18.617Z",
+    "end": "2025-08-06T16:23:56.352Z",
+    "duration": 37735,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2df45f42-d705-4361-974f-f449c1dc7187",
+      "title": "",
+      "fullFile": "cypress/e2e/download/TC24_download_invoice.cy.js",
+      "file": "cypress/e2e/download/TC24_download_invoice.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f3fbe4c6-a98a-47ed-b379-bbdea38a9d0f",
+          "title": "Test Case 24: Download Invoice after purchase order",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit permettre de télécharger la facture après la commande",
+              "fullTitle": "Test Case 24: Download Invoice after purchase order doit permettre de télécharger la facture après la commande",
+              "timedOut": null,
+              "duration": 37614,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.telechargerFactureCommande();",
+              "err": {},
+              "uuid": "a5a3f9b1-07d8-4f52-9343-9f7b6cc87e56",
+              "parentUUID": "f3fbe4c6-a98a-47ed-b379-bbdea38a9d0f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a5a3f9b1-07d8-4f52-9343-9f7b6cc87e56"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37614,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

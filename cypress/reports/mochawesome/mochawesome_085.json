@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-08-06T16:28:17.086Z",
+    "end": "2025-08-06T16:28:17.776Z",
+    "duration": 690,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "64da0c8f-abac-4cd6-9b70-2b4561e402eb",
+      "title": "",
+      "fullFile": "testapi/update_user.spec.js",
+      "file": "testapi/update_user.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fea68347-271f-4d6f-a3c9-35131762f989",
+          "title": "API 13 – Update User Account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create then update the user account",
+              "fullTitle": "API 13 – Update User Account should create then update the user account",
+              "timedOut": null,
+              "duration": 624,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const user = (0, _utils.creerUserUnique)();\n// Step 1 – Create the user\ncy.request({\n  method: 'POST',\n  url: 'https://automationexercise.com/api/createAccount',\n  form: true,\n  body: {\n    name: user.name,\n    email: user.email,\n    password: user.password,\n    title: 'Mr',\n    birth_date: '15',\n    birth_month: 'April',\n    birth_year: '1990',\n    firstname: 'Nassim',\n    lastname: 'Kahlaoui',\n    company: 'QADev',\n    address1: 'Rue du Test',\n    address2: 'Résidence QA',\n    country: 'Morocco',\n    zipcode: '12345',\n    state: 'Casa',\n    city: 'Casablanca',\n    mobile_number: '0600000000'\n  }\n}).then(res => {\n  expect(res.status).to.eq(200);\n  const body = JSON.parse(res.body);\n  expect(body.message).to.eq('User created!');\n  // Step 2 – Update the user\n  cy.request({\n    method: 'PUT',\n    url: 'https://automationexercise.com/api/updateAccount',\n    form: true,\n    body: {\n      email: user.email,\n      password: user.password,\n      name: 'Nassimlaila',\n      address1: 'markch adresse 456',\n      mobile_number: '0666938510'\n    }\n  }).then(res => {\n    expect(res.status).to.eq(200);\n    const body = JSON.parse(res.body);\n    expect(body.message).to.eq('User updated!');\n  });\n});",
+              "err": {},
+              "uuid": "7d8aa807-ce4f-45c3-aed4-534c913b0b78",
+              "parentUUID": "fea68347-271f-4d6f-a3c9-35131762f989",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7d8aa807-ce4f-45c3-aed4-534c913b0b78"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 624,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

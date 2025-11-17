@@ -1,0 +1,39 @@
+stages:
+  - test
+  - report
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .cache/Cypress      
+
+test:
+  stage: test
+  image: cypress/browsers:node-20.10.0-chrome-118.0.5993.88-1-ff-118.0.2-edge-118.0.2088.46-1
+  script:
+    - npm install
+    - npx cypress install   
+    - npx cypress run
+  artifacts:
+    when: always
+    paths:
+      - cypress/reports/mochawesome
+      - cypress/videos
+      - cypress/screenshots
+    expire_in: 1 day
+
+report:
+  stage: report
+  image: node:18
+  script:
+    - npm install
+    - node generate-report.js
+    - node write-results.js
+    
+  dependencies:
+    - test
+  artifacts:
+    paths:
+      - cypress/reports/mochawesome/html/report.html
+    expire_in: 2 days
