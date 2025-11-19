@@ -7,44 +7,69 @@ pool:
 steps:
   - checkout: self
 
-  # 1) Install Node
+  # Cache Node modules (optional)
+  - task: Cache@2
+    inputs:
+      key: 'npm | "$(Agent.OS)" | package-lock.json'
+      restoreKeys: |
+        npm | "$(Agent.OS)"
+      path: 'node_modules'
+
+  # Install Node
   - task: NodeTool@0
     inputs:
       versionSpec: '20.x'
     displayName: 'Install Node.js'
 
-  # 2) Install dependencies
+  # Install dependencies + Cypress
   - script: |
       npm install
       npx cypress install
-    displayName: 'Install Cypress & dependencies'
+    displayName: 'Install Cypress & deps'
 
-  # 3) Run Cypress tests
+  # Run Cypress tests
   - script: |
       npx cypress run
-    displayName: 'Run Cypress tests'
+    displayName: 'Run Cypress Tests'
 
-  # 4) Generate Mochawesome report
+  # Generate Mochawesome Report
   - script: |
       node generate-report.js
       node write-results.js
-    displayName: "Generate report"
+    displayName: 'Generate Mochawesome Report'
 
-  # 5) Publish artifacts
+  # Publish mochawesome
   - task: PublishBuildArtifacts@1
+    displayName: 'Publish mochawesome'
     inputs:
-      pathToPublish: 'cypress/reports/mochawesome'
-      artifactName: 'mochawesome-report'
+      PathtoPublish: 'cypress/reports/mochawesome'
+      ArtifactName: 'mochawesome'
       publishLocation: 'Container'
+    continueOnError: true
 
+  # Publish videos
   - task: PublishBuildArtifacts@1
+    displayName: 'Publish videos'
     inputs:
-      pathToPublish: 'cypress/videos'
-      artifactName: 'videos'
+      PathtoPublish: 'cypress/videos'
+      ArtifactName: 'videos'
       publishLocation: 'Container'
+    continueOnError: true
 
+  # Publish screenshots
   - task: PublishBuildArtifacts@1
+    displayName: 'Publish screenshots'
     inputs:
-      pathToPublish: 'cypress/screenshots'
-      artifactName: 'screenshots'
+      PathtoPublish: 'cypress/screenshots'
+      ArtifactName: 'screenshots'
       publishLocation: 'Container'
+    continueOnError: true
+
+  # Publish HTML report
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish HTML report'
+    inputs:
+      PathtoPublish: 'cypress/reports/mochawesome/html'
+      ArtifactName: 'html-report'
+      publishLocation: 'Container'
+    continueOnError: true

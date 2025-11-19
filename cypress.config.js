@@ -18,6 +18,10 @@ module.exports = defineConfig({
     downloadsFolder: 'cypress/downloads',
     screenshotOnRunFailure: true,
      pageLoadTimeout: 12000,
+
+     viewportWidth: 2100,
+      viewportHeight: 900,
+
     video: true,
 
     setupNodeEvents(on, config) {
