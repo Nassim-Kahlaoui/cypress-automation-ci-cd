@@ -1,132 +1,80 @@
 trigger:
   - main
 
-# ==========================================================
-#                   GLOBAL SETTINGS
-# ==========================================================
-variables:
-  CYPRESS_CACHE_FOLDER: $(Pipeline.Workspace)/cypress-cache
-  CYPRESS_RETRIES: 2
-  NODE_VERSION: '20.x'
+pool:
+  vmImage: 'ubuntu-latest'
 
-# ==========================================================
-#                    STAGE 1 : BUILD
-# ==========================================================
-stages:
-  - stage: Build
-    displayName: "🔧 Build & Install"
-    jobs:
-      - job: BuildJob
-        displayName: "Install Dependencies & Cypress"
-        pool:
-          vmImage: ubuntu-latest
+steps:
+  - checkout: self
 
-        steps:
-          - checkout: self
+  # Cache Node modules (optional)
+  - task: Cache@2
+    inputs:
+      key: 'npm | "$(Agent.OS)" | package-lock.json'
+      restoreKeys: |
+        npm | "$(Agent.OS)"
+      path: 'node_modules'
 
-          # Cache Node Modules
-          - task: Cache@2
-            displayName: "Cache Node Modules"
-            inputs:
-              key: 'npm | "$(Agent.OS)" | package-lock.json'
-              restoreKeys: 'npm | "$(Agent.OS)"'
-              path: node_modules
+  # Install Node
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.x'
+    displayName: 'Install Node.js'
 
-          # Install Node
-          - task: NodeTool@0
-            displayName: "Install Node.js"
-            inputs:
-              versionSpec: $(NODE_VERSION)
+  # Clean old Cypress cache (important for Azure Pipelines)
+  - script: rm -rf ~/.cache/Cypress
+    displayName: 'Clean Cypress cache'
 
-          # Install deps + Cypress
-          - script: |
-              npm install
-              npx cypress install
-            displayName: "Install NPM Packages & Cypress"
+  # Install dependencies + Cypress binary
+  - script: |
+      npm ci
+      npx cypress install --force
+    displayName: 'Install Cypress & download binary'
 
-          # Cache Cypress binary
-          - task: Cache@2
-            displayName: "Cache Cypress Binary"
-            inputs:
-              key: 'cypress | "$(Agent.OS)"'
-              restoreKeys: 'cypress | "$(Agent.OS)"'
-              path: $(CYPRESS_CACHE_FOLDER)
+  # Run Cypress tests
+  - script: |
+      echo "Running tests on browser: chrome"
+      npx cypress run --browser chrome
+    displayName: 'Run Cypress Tests (Chrome)'
 
-# ==========================================================
-#                    STAGE 2 : TEST
-# ==========================================================
-  - stage: Test
-    dependsOn: Build
-    displayName: "🧪 Cypress Parallel Tests"
-    jobs:
-      - job: CypressTests
-        displayName: "Run Cypress Tests (Chrome & Edge)"
-        pool:
-          vmImage: ubuntu-latest
+  # Generate Mochawesome Report
+  - script: |
+      node generate-report.js
+      node write-results.js
+    displayName: 'Generate Mochawesome Report'
 
-        strategy:
-          matrix:
-            Chrome:
-              BROWSER: chrome
-            Edge:
-              BROWSER: edge
-              parallel: 2
+  # Publish mochawesome
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish mochawesome'
+    inputs:
+      PathtoPublish: 'cypress/reports/mochawesome'
+      ArtifactName: 'mochawesome'
+      publishLocation: 'Container'
+    continueOnError: true
 
-        steps:
-          - checkout: self
+  # Publish videos
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish videos'
+    inputs:
+      PathtoPublish: 'cypress/videos'
+      ArtifactName: 'videos'
+      publishLocation: 'Container'
+    continueOnError: true
 
-          - script: |
-              echo "Running tests on browser: $(BROWSER)"
-              npx cypress run \
-                --browser $(BROWSER) \
-                --reporter mochawesome \
-                --env retry=$(CYPRESS_RETRIES)
-            displayName: "Run Cypress with Mochawesome + Retry"
+  # Publish screenshots
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish screenshots'
+    inputs:
+      PathtoPublish: 'cypress/screenshots'
+      ArtifactName: 'screenshots'
+      publishLocation: 'Container'
+    continueOnError: true
 
-# ==========================================================
-#                    STAGE 3 : REPORTS
-# ==========================================================
-  - stage: Reports
-    dependsOn: Test
-    displayName: "📊 Generate & Publish Reports"
-    jobs:
-      - job: ReportsJob
-        displayName: "Mochawesome Merge + Artifacts"
-        pool:
-          vmImage: ubuntu-latest
-
-        steps:
-          - checkout: self
-
-          # Install merge tools
-          - script: |
-              npm install mochawesome-merge mochawesome-report-generator
-            displayName: "Install Report Tools"
-
-          # Merge reports
-          - script: |
-              npx mochawesome-merge cypress/reports/*.json > merged-output.json
-              npx mochawesome-report-generator merged-output.json -o cypress/reports/html
-            displayName: "Generate HTML Dashboard"
-
-          # Publish artifacts
-          - task: PublishBuildArtifacts@1
-            displayName: "📤 Publish HTML Report"
-            inputs:
-              PathtoPublish: 'cypress/reports/html'
-              ArtifactName: 'HTML-Report'
-              publishLocation: 'Container'
-
-          - task: PublishBuildArtifacts@1
-            displayName: "📤 Publish Videos"
-            inputs:
-              PathtoPublish: 'cypress/videos'
-              ArtifactName: 'Videos'
-              publishLocation: 'Container'
-
-          - task: PublishBuildArtifacts@1
-            displayName: "📤 Publish Screenshots"
-            inputs:
-              PathtoPublish: 'cypress/screenshots'
-              ArtifactName: 'Screenshots'
-              publishLocation: 'Container'
+  # Publish HTML report
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish HTML report'
+    inputs:
+      PathtoPublish: 'cypress/reports/mochawesome/html'
+      ArtifactName: 'html-report'
+      publishLocation: 'Container'
+    continueOnError: true
