@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-24T10:37:57.522Z",
+    "end": "2025-11-24T10:38:23.243Z",
+    "duration": 25721,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "38738578-6b39-4ad6-91d8-1af5e650a08b",
+      "title": "",
+      "fullFile": "cypress/e2e/download/TC24_download_invoice.cy.js",
+      "file": "cypress/e2e/download/TC24_download_invoice.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cc984997-21fb-4199-b825-6b4a17394275",
+          "title": "Test Case 24: Download Invoice after purchase order",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit permettre de télécharger la facture après la commande",
+              "fullTitle": "Test Case 24: Download Invoice after purchase order doit permettre de télécharger la facture après la commande",
+              "timedOut": null,
+              "duration": 25584,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.telechargerFactureCommande();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(7) > .btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(7) > .btn`, but never found it.\n    at Object.boutonPlaceOrder (webpack://cypress-ecomerce/./cypress/fixtures/selecteurs.js:120:27)\n    at Context.eval (webpack://cypress-ecomerce/./cypress/support/commands.js:397:13)",
+                "diff": null
+              },
+              "uuid": "9c0332ed-044a-45e8-a214-ddf541cdde94",
+              "parentUUID": "cc984997-21fb-4199-b825-6b4a17394275",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9c0332ed-044a-45e8-a214-ddf541cdde94"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 25584,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

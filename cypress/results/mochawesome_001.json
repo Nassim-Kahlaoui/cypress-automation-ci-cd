@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-24T10:33:05.545Z",
+    "end": "2025-11-24T10:33:13.127Z",
+    "duration": 7582,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6a8aef2d-5a15-4f80-bf8a-9dbafc12b34f",
+      "title": "",
+      "fullFile": "cypress/e2e/account/TC19_view_cart_brand_products.cy.js",
+      "file": "cypress/e2e/account/TC19_view_cart_brand_products.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "26ff4cb3-1aca-489e-be28-969a8e8f61ea",
+          "title": "Test Case 19  ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit afficher les marques sur la page Produits",
+              "fullTitle": "Test Case 19   doit afficher les marques sur la page Produits",
+              "timedOut": null,
+              "duration": 7457,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ouvrirProduitsEtVerifierMarques('Polo');",
+              "err": {},
+              "uuid": "71da6678-3635-4631-bf28-aa81c0b9ff6c",
+              "parentUUID": "26ff4cb3-1aca-489e-be28-969a8e8f61ea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "71da6678-3635-4631-bf28-aa81c0b9ff6c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7457,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

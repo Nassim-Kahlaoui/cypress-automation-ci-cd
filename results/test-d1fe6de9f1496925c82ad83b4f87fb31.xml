@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="13.277" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:12:24" tests="0" file="testapi/login_valid.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API 7 – Login with valid credentials" timestamp="2025-11-24T11:12:24" tests="1" time="13.272" failures="0">
+    <testcase name="API 7 – Login with valid credentials should return 200 and &quot;User exists&quot; message" time="13.206" classname="should return 200 and &quot;User exists&quot; message">
+    </testcase>
+  </testsuite>
+</testsuites>

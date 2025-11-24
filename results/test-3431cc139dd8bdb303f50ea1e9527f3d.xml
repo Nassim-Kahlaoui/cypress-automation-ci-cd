@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="6.702" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T10:55:31" tests="0" file="cypress/e2e/authentication/TC02_login_user_correct.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 2: Login and Delete Account" timestamp="2025-11-24T10:55:31" tests="1" time="6.684" failures="0">
+    <testcase name="Test Case 2: Login and Delete Account doit se connecter et supprimer le compte avec succès" time="6.647" classname="doit se connecter et supprimer le compte avec succès">
+    </testcase>
+  </testsuite>
+</testsuites>

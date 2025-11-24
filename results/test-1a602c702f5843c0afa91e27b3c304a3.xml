@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.186" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:07:25" tests="0" file="cypress/e2e/authentication/TC03_login_user_incorrect.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case: Login with incorrect email and password" timestamp="2025-11-24T11:07:25" tests="1" time="4.148" failures="0">
+    <testcase name="Test Case: Login with incorrect email and password doit afficher un message d&apos;erreur pour email ou mot de passe incorrect" time="4.070" classname="doit afficher un message d&apos;erreur pour email ou mot de passe incorrect">
+    </testcase>
+  </testsuite>
+</testsuites>

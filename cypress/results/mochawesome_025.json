@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-24T10:39:12.783Z",
+    "end": "2025-11-24T10:39:13.138Z",
+    "duration": 355,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b50718a9-c07e-47df-82fe-17919c86d7c0",
+      "title": "",
+      "fullFile": "testapi/brands.spec.js",
+      "file": "testapi/brands.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c1a1bd0d-5ff2-4fad-9466-9c3e22598fa7",
+          "title": "API 3 – Get All brands List",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return 200 and a list of brands",
+              "fullTitle": "API 3 – Get All brands List should return 200 and a list of brands",
+              "timedOut": null,
+              "duration": 320,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('https://automationexercise.com/api/brandsList').then(res => {\n  expect(res.status).to.eq(200);\n  // ✅ Parse the string body to real JSON\n  const body = JSON.parse(res.body);\n  expect(body).to.have.property('brands');\n  expect(body.brands).to.be.an('array');\n  expect(body.brands.length).to.be.greaterThan(0);\n});",
+              "err": {},
+              "uuid": "5be1eb27-caef-45fe-a6e5-917d3b4cb5dd",
+              "parentUUID": "c1a1bd0d-5ff2-4fad-9466-9c3e22598fa7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5be1eb27-caef-45fe-a6e5-917d3b4cb5dd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 320,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

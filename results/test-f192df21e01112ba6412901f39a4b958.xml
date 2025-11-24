@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="31.141" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:05:46" tests="0" file="cypress/e2e/account/TC20_search_products_and_verify_cart.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 20: Search Products and Verify Cart After Login" timestamp="2025-11-24T11:05:46" tests="1" time="31.099" failures="0">
+    <testcase name="Test Case 20: Search Products and Verify Cart After Login doit rechercher un produit, l’ajouter au panier, se connecter et vérifier que le panier est conservé" time="30.997" classname="doit rechercher un produit, l’ajouter au panier, se connecter et vérifier que le panier est conservé">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.385" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:12:01" tests="0" file="testapi/brands.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API 3 – Get All brands List" timestamp="2025-11-24T11:12:01" tests="1" time="0.379" failures="0">
+    <testcase name="API 3 – Get All brands List should return 200 and a list of brands" time="0.348" classname="should return 200 and a list of brands">
+    </testcase>
+  </testsuite>
+</testsuites>

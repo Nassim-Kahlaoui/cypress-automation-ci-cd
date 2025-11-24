@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="6.854" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:05:36" tests="0" file="cypress/e2e/account/TC19_view_cart_brand_products.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 19  " timestamp="2025-11-24T11:05:36" tests="1" time="6.850" failures="0">
+    <testcase name="Test Case 19   doit afficher les marques sur la page Produits" time="6.742" classname="doit afficher les marques sur la page Produits">
+    </testcase>
+  </testsuite>
+</testsuites>

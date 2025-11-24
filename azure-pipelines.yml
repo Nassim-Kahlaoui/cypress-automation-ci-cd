@@ -7,7 +7,7 @@ pool:
 steps:
   - checkout: self
 
-  # Cache Node modules (optional)
+  # Cache Node modules
   - task: Cache@2
     inputs:
       key: 'npm | "$(Agent.OS)" | package-lock.json'
@@ -21,34 +21,43 @@ steps:
       versionSpec: '20.x'
     displayName: 'Install Node.js'
 
-  # Clean old Cypress cache (important for Azure Pipelines)
+  # Clean Cypress cache
   - script: rm -rf ~/.cache/Cypress
     displayName: 'Clean Cypress cache'
 
-  # Install dependencies + Cypress binary
+  # Install deps + Cypress
   - script: |
       npm ci
       npx cypress install --force
-    displayName: 'Install Cypress & download binary'
+    displayName: 'Install Cypress & binary'
 
-  # Run Cypress tests
+  # Run Cypress WITH JUNIT (Dashboard Azure)
   - script: |
-      echo "Running tests on browser: chrome"
-      npx cypress run --browser chrome
-    displayName: 'Run Cypress Tests (Chrome)'
+      echo "Running Cypress with JUnit reporting"
+      npx cypress run --browser chrome --reporter junit --reporter-options "mochaFile=results/test-[hash].xml"
+    displayName: 'Run Cypress Tests (JUnit for Azure Dashboard)'
 
-  # Generate Mochawesome Report
+  # Publish JUNIT XML to Azure (required for Dashboard)
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: 'results/*.xml'
+      testRunTitle: 'Cypress Tests'
+      mergeTestResults: true
+    condition: succeededOrFailed()
+    displayName: 'Publish Test Results (JUnit XML)'
+
+  # Generate Mochawesome Report (optional)
   - script: |
       node generate-report.js
       node write-results.js
     displayName: 'Generate Mochawesome Report'
 
-  # Publish mochawesome
+  # Publish Mochawesome HTML Report
   - task: PublishBuildArtifacts@1
-    displayName: 'Publish mochawesome'
+    displayName: 'Publish Mochawesome HTML'
     inputs:
-      PathtoPublish: 'cypress/reports/mochawesome'
-      ArtifactName: 'mochawesome'
+      PathtoPublish: 'mochawesome-report'
+      ArtifactName: 'mochawesome-report'
       publishLocation: 'Container'
     continueOnError: true
 
@@ -67,14 +76,5 @@ steps:
     inputs:
       PathtoPublish: 'cypress/screenshots'
       ArtifactName: 'screenshots'
-      publishLocation: 'Container'
-    continueOnError: true
-
-  # Publish HTML report
-  - task: PublishBuildArtifacts@1
-    displayName: 'Publish HTML report'
-    inputs:
-      PathtoPublish: 'cypress/reports/mochawesome/html'
-      ArtifactName: 'html-report'
       publishLocation: 'Container'
     continueOnError: true

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.103" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T10:56:24" tests="0" file="cypress/e2e/cart/TC11_verify_subscription_cart.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 11: Verify Subscription in Cart page" timestamp="2025-11-24T10:56:24" tests="1" time="4.100" failures="0">
+    <testcase name="Test Case 11: Verify Subscription in Cart page doit s’abonner avec succès via le footer de la page Cart" time="4.040" classname="doit s’abonner avec succès via le footer de la page Cart">
+    </testcase>
+  </testsuite>
+</testsuites>

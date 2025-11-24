@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-24T10:33:46.400Z",
+    "end": "2025-11-24T10:33:51.529Z",
+    "duration": 5129,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c0bace7a-cf71-4f98-aea6-c07e25c3f393",
+      "title": "",
+      "fullFile": "cypress/e2e/account/TC21_add_review_product.cy.js",
+      "file": "cypress/e2e/account/TC21_add_review_product.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a18702c4-d3d1-40e2-9226-bd151426d1ae",
+          "title": "Test Case 21: Add review on product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit permettre d’ajouter un avis sur un produit avec succès",
+              "fullTitle": "Test Case 21: Add review on product doit permettre d’ajouter un avis sur un produit avec succès",
+              "timedOut": null,
+              "duration": 5057,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ajouterAvisProduit('Nassim Kahlaoui', 'nassim11kahlaoui@gmail.com', 'Excellent produit, je recommande vivement !');",
+              "err": {},
+              "uuid": "f939ce96-35a9-49e9-8b9b-fa5b64c31f69",
+              "parentUUID": "a18702c4-d3d1-40e2-9226-bd151426d1ae",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f939ce96-35a9-49e9-8b9b-fa5b64c31f69"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5057,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

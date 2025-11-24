@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.324" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:00:15" tests="0" file="testapi/products_post.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API 2 – POST to /productsList should fail" timestamp="2025-11-24T11:00:15" tests="1" time="0.304" failures="0">
+    <testcase name="API 2 – POST to /productsList should fail should return 405 Method Not Allowed" time="0.279" classname="should return 405 Method Not Allowed">
+    </testcase>
+  </testsuite>
+</testsuites>

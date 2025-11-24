@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-24T10:34:42.705Z",
+    "end": "2025-11-24T10:34:47.661Z",
+    "duration": 4956,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1676bd33-5baf-4b63-9bfe-c3041f41b14b",
+      "title": "",
+      "fullFile": "cypress/e2e/cart/TC13_verify_cart_after_login.cy.js",
+      "file": "cypress/e2e/cart/TC13_verify_cart_after_login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bc307a7e-3b91-472c-b0b4-da3afcad5645",
+          "title": "Test Case 13: Vérifier quantité produit dans le panier",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit afficher la bonne quantité après ajout",
+              "fullTitle": "Test Case 13: Vérifier quantité produit dans le panier doit afficher la bonne quantité après ajout",
+              "timedOut": null,
+              "duration": 4907,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ajouterProduitAvecQuantite(4, 4); // Produit 0, quantité 4",
+              "err": {},
+              "uuid": "b52b3c5e-733a-4d53-a8be-bb083cf144bd",
+              "parentUUID": "bc307a7e-3b91-472c-b0b4-da3afcad5645",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b52b3c5e-733a-4d53-a8be-bb083cf144bd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4907,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

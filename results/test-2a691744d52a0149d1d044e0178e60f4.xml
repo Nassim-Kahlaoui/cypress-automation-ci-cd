@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.602" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:06:19" tests="0" file="cypress/e2e/account/TC21_add_review_product.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 21: Add review on product" timestamp="2025-11-24T11:06:19" tests="1" time="4.585" failures="0">
+    <testcase name="Test Case 21: Add review on product doit permettre d’ajouter un avis sur un produit avec succès" time="4.513" classname="doit permettre d’ajouter un avis sur un produit avec succès">
+    </testcase>
+  </testsuite>
+</testsuites>

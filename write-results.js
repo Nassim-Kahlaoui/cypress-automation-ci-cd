@@ -34,5 +34,6 @@ writeApi
     console.log('✅ Résultats envoyés à InfluxDB');
   })
   .catch(e => {
+    
     console.error('❌ Erreur en envoyant à InfluxDB', e);
   });

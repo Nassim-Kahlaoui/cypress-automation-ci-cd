@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.551" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T10:59:40" tests="0" file="testapi/delete_user.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API 12 – Delete User Account" timestamp="2025-11-24T10:59:40" tests="1" time="0.545" failures="0">
+    <testcase name="API 12 – Delete User Account should create then delete the user account" time="0.519" classname="should create then delete the user account">
+    </testcase>
+  </testsuite>
+</testsuites>

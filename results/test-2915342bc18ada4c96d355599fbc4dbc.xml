@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.549" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:12:11" tests="0" file="testapi/get_user_detail.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API 14 – Get User Detail by Email" timestamp="2025-11-24T11:12:11" tests="1" time="0.544" failures="0">
+    <testcase name="API 14 – Get User Detail by Email should create a user then retrieve its details" time="0.515" classname="should create a user then retrieve its details">
+    </testcase>
+  </testsuite>
+</testsuites>

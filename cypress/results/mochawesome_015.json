@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-24T10:36:31.285Z",
+    "end": "2025-11-24T10:37:00.912Z",
+    "duration": 29627,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "65f7c3ea-d3b2-4a4d-92fd-898cab4a7265",
+      "title": "",
+      "fullFile": "cypress/e2e/orders/TC15_register_before_checkout.cy.js",
+      "file": "cypress/e2e/orders/TC15_register_before_checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "729e02c5-15f8-438f-be6d-606345f268f2",
+          "title": "Test Case 15: Place Order - Register before Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit inscrire un utilisateur avant le checkout puis finaliser la commande",
+              "fullTitle": "Test Case 15: Place Order - Register before Checkout doit inscrire un utilisateur avant le checkout puis finaliser la commande",
+              "timedOut": null,
+              "duration": 29553,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Étapes 1 à 3 : Lancer et vérifier la home page\ncy.visit(_baseUrl.baseUrl);\n_selecteurs.selecteurs.logoHomePage().should('be.visible');\n// Étape 4 : Cliquer sur 'Signup / Login'\n_selecteurs.selecteurs.lienConnexionInscription().click();\n// Étapes 5 à 6 : Créer un compte\ncy.enregistrerUtilisateur(); // ta commande existante gère déjà toute l’inscription\n// Étape 7 : Vérifier qu’on est connecté\n_selecteurs.selecteurs.texteLoggedIn().should('contain.text', 'Logged in as');\n// Étape 8 : Ajouter produit au panier\ncy.ajouterProduitAvecQuantite(1, 1); // tu choisis l’index et la quantité que tu veux\n// Étape 9 : Aller au panier\n_selecteurs.selecteurs.boutonCart().click();\n// Étape 10 : Vérifier que la page du panier est affichée\ncy.url().should('include', '/view_cart');\n// Étapes 11 à 18 → on utilise ta commande existante\ncy.finaliserCommandeEtSupprimerCompte();",
+              "err": {},
+              "uuid": "644f09c0-c40d-4d9e-bb8b-02cf881619cc",
+              "parentUUID": "729e02c5-15f8-438f-be6d-606345f268f2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "644f09c0-c40d-4d9e-bb8b-02cf881619cc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29553,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

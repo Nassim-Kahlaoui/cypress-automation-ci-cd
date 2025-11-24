@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-24T10:35:59.584Z",
+    "end": "2025-11-24T10:36:28.584Z",
+    "duration": 29000,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "abc23d6f-deb8-4276-8a89-d4f4cd7497da",
+      "title": "",
+      "fullFile": "cypress/e2e/orders/TC14_place_order_register_checkout.cy.js",
+      "file": "cypress/e2e/orders/TC14_place_order_register_checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "16122c53-6e9e-425f-a84d-54d3ddf7cad4",
+          "title": "Test Case 14: Place Order - Register while Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit permettre à un utilisateur de s’inscrire pendant le checkout et de passer commande avec succès",
+              "fullTitle": "Test Case 14: Place Order - Register while Checkout doit permettre à un utilisateur de s’inscrire pendant le checkout et de passer commande avec succès",
+              "timedOut": null,
+              "duration": 28924,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.ajouterProduitAvecQuantite(4, 4);\ncy.contains('Proceed To Checkout').click();\ncy.contains('Register / Login').click();\ncy.enregistrerUtilisateur();\n// 👉 Finalisation + suppression\ncy.finaliserCommandeEtSupprimerCompte();",
+              "err": {},
+              "uuid": "29b00691-0eec-4418-8a08-3ee76e7c67fd",
+              "parentUUID": "16122c53-6e9e-425f-a84d-54d3ddf7cad4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "29b00691-0eec-4418-8a08-3ee76e7c67fd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28924,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

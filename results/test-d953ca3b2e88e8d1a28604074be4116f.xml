@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.721" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:00:27" tests="0" file="testapi/update_user.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API 13 – Update User Account" timestamp="2025-11-24T11:00:27" tests="1" time="0.714" failures="0">
+    <testcase name="API 13 – Update User Account should create then update the user account" time="0.689" classname="should create then update the user account">
+    </testcase>
+  </testsuite>
+</testsuites>

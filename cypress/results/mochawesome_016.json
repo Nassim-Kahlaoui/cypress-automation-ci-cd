@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-24T10:37:03.609Z",
+    "end": "2025-11-24T10:37:39.607Z",
+    "duration": 35998,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "03c8658b-1c40-4b7e-b821-e1f443be211d",
+      "title": "",
+      "fullFile": "cypress/e2e/orders/TC16_place_order_login_before_checkout.cy.js",
+      "file": "cypress/e2e/orders/TC16_place_order_login_before_checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b5ff16b0-6a5f-4f6c-9806-f113c78bca72",
+          "title": "Test Case 16: Place Order - Login before Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit permettre à un utilisateur connecté de passer une commande avec succès",
+              "fullTitle": "Test Case 16: Place Order - Login before Checkout doit permettre à un utilisateur connecté de passer une commande avec succès",
+              "timedOut": null,
+              "duration": 35889,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(_baseUrl.baseUrl);\n_selecteurs.selecteurs.logoHomePage().should('be.visible');\n// Utiliser ta commande personnalisée pour se connecter\nconst user = (0, _utils.creerUserUnique)();\ncy.enregistrerUtilisateur(user);\n_selecteurs.selecteurs.boutonLogout().should('be.visible').click();\ncy.seConnecter();\n// Ajouter produits au panier\ncy.ajouterProduitAvecQuantite(1, 1);\n// Aller au panier\n_selecteurs.selecteurs.boutonCart().click();\ncy.url().should('include', '/view_cart');\n// Finaliser commande & supprimer compte\ncy.finaliserCommandeEtSupprimerCompte();",
+              "err": {},
+              "uuid": "e3751792-6a35-4ddf-86de-4786da705798",
+              "parentUUID": "b5ff16b0-6a5f-4f6c-9806-f113c78bca72",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e3751792-6a35-4ddf-86de-4786da705798"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35889,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

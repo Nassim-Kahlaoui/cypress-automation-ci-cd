@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="41.064" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T10:57:53" tests="0" file="cypress/e2e/orders/TC16_place_order_login_before_checkout.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 16: Place Order - Login before Checkout" timestamp="2025-11-24T10:57:53" tests="1" time="41.046" failures="0">
+    <testcase name="Test Case 16: Place Order - Login before Checkout doit permettre à un utilisateur connecté de passer une commande avec succès" time="40.961" classname="doit permettre à un utilisateur connecté de passer une commande avec succès">
+    </testcase>
+  </testsuite>
+</testsuites>

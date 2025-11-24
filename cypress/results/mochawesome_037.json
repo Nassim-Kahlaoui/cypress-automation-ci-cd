@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-24T10:40:02.986Z",
+    "end": "2025-11-24T10:40:03.563Z",
+    "duration": 577,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cb75d4e2-eef7-47ee-ab75-57cd4e241d54",
+      "title": "",
+      "fullFile": "testapi/search_product_no_param.spec.js",
+      "file": "testapi/search_product_no_param.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "34f729ef-f971-4c09-b77a-2b8ef0bd3451",
+          "title": "API 6 – Search product by name",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return 200 and products array",
+              "fullTitle": "API 6 – Search product by name should return 200 and products array",
+              "timedOut": null,
+              "duration": 503,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: 'https://automationexercise.com/api/searchProduct',\n  form: true\n}).then(res => {\n  expect(res.status).to.eq(200);\n  const body = JSON.parse(res.body);\n  expect(body).to.have.property('message');\n  expect(body.message).to.eq('Bad request, search_product parameter is missing in POST request.');\n  expect(body).to.not.have.property('products');\n});",
+              "err": {},
+              "uuid": "5f46d451-eb2f-4449-9414-ccf2b80d8099",
+              "parentUUID": "34f729ef-f971-4c09-b77a-2b8ef0bd3451",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5f46d451-eb2f-4449-9414-ccf2b80d8099"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 503,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

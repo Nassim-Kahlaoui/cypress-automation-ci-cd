@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.513" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T10:54:09" tests="0" file="cypress/e2e/account/TC22_add_to_cart_recommended_items.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 22: Add to cart from Recommended items" timestamp="2025-11-24T10:54:09" tests="1" time="4.476" failures="0">
+    <testcase name="Test Case 22: Add to cart from Recommended items doit ajouter un produit recommandé au panier avec succès" time="4.433" classname="doit ajouter un produit recommandé au panier avec succès">
+    </testcase>
+  </testsuite>
+</testsuites>

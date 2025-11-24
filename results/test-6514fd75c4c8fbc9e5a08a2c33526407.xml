@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.606" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T10:56:17" tests="0" file="cypress/e2e/authentication/TC05_register_existing_email.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 5: Register avec un email déjà existant" timestamp="2025-11-24T10:56:17" tests="1" time="4.601" failures="0">
+    <testcase name="Test Case 5: Register avec un email déjà existant doit afficher une erreur si email déjà utilisé" time="4.540" classname="doit afficher une erreur si email déjà utilisé">
+    </testcase>
+  </testsuite>
+</testsuites>

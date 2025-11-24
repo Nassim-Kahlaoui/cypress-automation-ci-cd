@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="26.625" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T10:55:48" tests="0" file="cypress/e2e/authentication/TC04_logout_user.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 4: Logout User" timestamp="2025-11-24T10:55:48" tests="1" time="26.617" failures="0">
+    <testcase name="Test Case 4: Logout User doit se connecter puis se déconnecter avec succès" time="26.531" classname="doit se connecter puis se déconnecter avec succès">
+    </testcase>
+  </testsuite>
+</testsuites>

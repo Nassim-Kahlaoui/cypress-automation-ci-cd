@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="34.239" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:09:42" tests="0" file="cypress/e2e/orders/TC15_register_before_checkout.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 15: Place Order - Register before Checkout" timestamp="2025-11-24T11:09:42" tests="1" time="34.235" failures="0">
+    <testcase name="Test Case 15: Place Order - Register before Checkout doit inscrire un utilisateur avant le checkout puis finaliser la commande" time="34.095" classname="doit inscrire un utilisateur avant le checkout puis finaliser la commande">
+    </testcase>
+  </testsuite>
+</testsuites>

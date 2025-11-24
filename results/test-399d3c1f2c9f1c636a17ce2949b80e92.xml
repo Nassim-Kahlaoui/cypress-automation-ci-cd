@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.302" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:12:52" tests="0" file="testapi/search_product_no_param.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API 6 – Search product by name" timestamp="2025-11-24T11:12:52" tests="1" time="0.297" failures="0">
+    <testcase name="API 6 – Search product by name should return 200 and products array" time="0.268" classname="should return 200 and products array">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-24T10:37:42.318Z",
+    "end": "2025-11-24T10:37:54.764Z",
+    "duration": 12446,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ce1b5461-9cf9-4be6-89b8-b7b200a59641",
+      "title": "",
+      "fullFile": "cypress/e2e/orders/TC17_remove_products_from_cart.cy.js",
+      "file": "cypress/e2e/orders/TC17_remove_products_from_cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "be374639-1844-4a09-a03e-5856dee8c754",
+          "title": "Test Case 17: Remove Products From Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit ajouter des produits puis supprimer un produit du panier",
+              "fullTitle": "Test Case 17: Remove Products From Cart doit ajouter des produits puis supprimer un produit du panier",
+              "timedOut": null,
+              "duration": 12335,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Étapes 1 à 3 : Ouvrir la page et vérifier accueil\ncy.visit(_baseUrl.baseUrl);\n_selecteurs.selecteurs.logoHomePage().should('be.visible');\n// Étape 4 : Ajouter 2 produits au panier\ncy.ajouterProduitAvecQuantite(0, 1);\ncy.ajouterProduitAvecQuantite(1, 4);\n// Étape 5 : Cliquer sur le bouton \"Cart\"\n_selecteurs.selecteurs.boutonCart().click();\n// Étape 6 : Vérifier que la page panier est affichée avec au moins 2 produits\n_selecteurs.selecteurs.lignesPanier().should('have.length.at.least', 0);\n// Étape 7 : Cliquer sur le bouton \"X\" du 1er produit pour le supprimer par  id :\n_selecteurs.selecteurs.boutonSupprimerProduitParId(1).should('be.visible').click();\n// Étape 8 : Vérifier que le produit a bien été supprimé (nombre réduit d’un)\n_selecteurs.selecteurs.lignesPanier().should('not.exist');",
+              "err": {},
+              "uuid": "46c59e5d-11d3-4d0e-b7b5-31b79a744061",
+              "parentUUID": "be374639-1844-4a09-a03e-5856dee8c754",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "46c59e5d-11d3-4d0e-b7b5-31b79a744061"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12335,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

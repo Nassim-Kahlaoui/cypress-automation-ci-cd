@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.318" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:12:17" tests="0" file="testapi/login_invalid.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API 10 – Login with invalid credentials" timestamp="2025-11-24T11:12:17" tests="1" time="0.311" failures="0">
+    <testcase name="API 10 – Login with invalid credentials should return 404 with error message" time="0.277" classname="should return 404 with error message">
+    </testcase>
+  </testsuite>
+</testsuites>

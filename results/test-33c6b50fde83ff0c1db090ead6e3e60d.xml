@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.361" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:12:04" tests="0" file="testapi/brands_put.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API 4 – PUT to /brandsList should fail" timestamp="2025-11-24T11:12:04" tests="1" time="0.356" failures="0">
+    <testcase name="API 4 – PUT to /brandsList should fail should return 200 but with error message" time="0.322" classname="should return 200 but with error message">
+    </testcase>
+  </testsuite>
+</testsuites>

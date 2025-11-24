@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.557" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:11:29" tests="0" file="cypress/e2e/products/TC07_test_cases_page.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Navigation vers la page Test Cases" timestamp="2025-11-24T11:11:29" tests="1" time="3.555" failures="0">
+    <testcase name="Navigation vers la page Test Cases devrait lancer le navigateur, accéder à la page d&apos;accueil, cliquer sur Test Cases et vérifier la navigation" time="3.393" classname="devrait lancer le navigateur, accéder à la page d&apos;accueil, cliquer sur Test Cases et vérifier la navigation">
+    </testcase>
+  </testsuite>
+</testsuites>

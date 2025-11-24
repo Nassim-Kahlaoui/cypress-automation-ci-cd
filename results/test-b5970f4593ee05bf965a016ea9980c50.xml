@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="9.255" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T10:58:52" tests="0" file="cypress/e2e/products/TC06_contact_us.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 6: Contact Us Form" timestamp="2025-11-24T10:58:52" tests="1" time="9.250" failures="0">
+    <testcase name="Test Case 6: Contact Us Form devrait envoyer le formulaire Contact avec succès" time="9.189" classname="devrait envoyer le formulaire Contact avec succès">
+    </testcase>
+  </testsuite>
+</testsuites>

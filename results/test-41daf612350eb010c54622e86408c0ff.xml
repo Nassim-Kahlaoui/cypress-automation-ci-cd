@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.296" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T10:59:47" tests="0" file="testapi/login_delete.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API 9 – DELETE to /verifyLogin should fail" timestamp="2025-11-24T10:59:47" tests="1" time="0.290" failures="0">
+    <testcase name="API 9 – DELETE to /verifyLogin should fail should return 400 and products array" time="0.263" classname="should return 400 and products array">
+    </testcase>
+  </testsuite>
+</testsuites>

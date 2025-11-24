@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.340" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:12:46" tests="0" file="testapi/register_user.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API 11 – Create/Register User Account" timestamp="2025-11-24T11:12:46" tests="1" time="0.335" failures="0">
+    <testcase name="API 11 – Create/Register User Account should return 201 and confirmation message" time="0.304" classname="should return 201 and confirmation message">
+    </testcase>
+  </testsuite>
+</testsuites>

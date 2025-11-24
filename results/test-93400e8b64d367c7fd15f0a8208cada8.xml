@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="22.893" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T10:54:16" tests="0" file="cypress/e2e/account/TC23_verify_address_details_review_order.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 23: Verify address details in checkout page" timestamp="2025-11-24T10:54:16" tests="1" time="22.876" failures="0">
+    <testcase name="Test Case 23: Verify address details in checkout page doit vérifier que les détails d’adresse sont corrects dans le checkout" time="22.773" classname="doit vérifier que les détails d’adresse sont corrects dans le checkout">
+    </testcase>
+  </testsuite>
+</testsuites>

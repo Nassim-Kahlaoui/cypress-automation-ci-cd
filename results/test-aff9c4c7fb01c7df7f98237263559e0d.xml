@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.438" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:11:03" tests="0" file="cypress/e2e/orders/TC17_remove_products_from_cart.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 17: Remove Products From Cart" timestamp="2025-11-24T11:11:03" tests="1" time="12.398" failures="0">
+    <testcase name="Test Case 17: Remove Products From Cart doit ajouter des produits puis supprimer un produit du panier" time="12.299" classname="doit ajouter des produits puis supprimer un produit du panier">
+    </testcase>
+  </testsuite>
+</testsuites>

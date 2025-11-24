@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.933" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-11-24T11:09:04" tests="0" file="cypress/e2e/download/TC25_scroll_up_down.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Case 25: Verify Scroll Up using Arrow button and Scroll Down functionality" timestamp="2025-11-24T11:09:04" tests="1" time="3.929" failures="0">
+    <testcase name="Test Case 25: Verify Scroll Up using Arrow button and Scroll Down functionality doit scroller vers le bas, puis revenir en haut avec la flèche" time="3.618" classname="doit scroller vers le bas, puis revenir en haut avec la flèche">
+    </testcase>
+  </testsuite>
+</testsuites>

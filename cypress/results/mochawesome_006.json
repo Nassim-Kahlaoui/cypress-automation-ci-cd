@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-11-24T10:34:26.768Z",
+    "end": "2025-11-24T10:34:30.790Z",
+    "duration": 4022,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9c8b7de7-1a65-4532-918e-e27b734218fb",
+      "title": "",
+      "fullFile": "cypress/e2e/cart/TC11_verify_subscription_cart.cy.js",
+      "file": "cypress/e2e/cart/TC11_verify_subscription_cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b600ceda-f025-4a9b-a6fe-594b27d2cafa",
+          "title": "Test Case 11: Verify Subscription in Cart page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "doit s’abonner avec succès via le footer de la page Cart",
+              "fullTitle": "Test Case 11: Verify Subscription in Cart page doit s’abonner avec succès via le footer de la page Cart",
+              "timedOut": null,
+              "duration": 3957,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Ouvre la page d’accueil, clique sur Cart, scroll jusqu’au footer et fait l’abonnement\ncy.subscribeFromCartPage('nassim13kahlaoui@gmail.com');",
+              "err": {},
+              "uuid": "b7c9d1d3-b71b-428e-8aaa-112fa750d696",
+              "parentUUID": "b600ceda-f025-4a9b-a6fe-594b27d2cafa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b7c9d1d3-b71b-428e-8aaa-112fa750d696"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3957,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
