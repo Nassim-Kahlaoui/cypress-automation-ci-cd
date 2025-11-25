@@ -117,7 +117,7 @@ inputCVC: () => cy.get('input[name="cvc"]'),
 inputExpiration: () => cy.get('input[name="expiry_month"]'),
 inputExpirationAnnee: () => cy.get('input[name="expiry_year"]'),
 boutonPayEtConfirmer: () => cy.get('#submit'),
-boutonPlaceOrder: () => cy.get(':nth-child(7) > .btn'),
+boutonPlaceOrder: () => cy.contains('Place Order'),
 
 boutonDeleteAccount: () => cy.contains('Delete Account'),
 
