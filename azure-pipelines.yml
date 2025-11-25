@@ -47,10 +47,10 @@ steps:
     displayName: 'Publish Test Results (JUnit XML)'
 
   # Generate Mochawesome Report (optional)
-  - script: |
-      node generate-report.js
-      node write-results.js
-    displayName: 'Generate Mochawesome Report'
+  #  - script: |
+     #   node generate-report.js
+    #    node write-results.js
+    #  displayName: 'Generate Mochawesome Report'
 
   # Publish Mochawesome HTML Report
   - task: PublishBuildArtifacts@1
